@@ -82,7 +82,7 @@ const Recommendations = () => {
                 </form>
                 <Box sx={{ mt: 4 }}>
                     <Typography variant="h5" component="h2" gutterBottom>
-                        Recommendations
+                       Your Submitted Recommendations
                     </Typography>
                     <TableContainer component={Paper}>
                         <Table>
