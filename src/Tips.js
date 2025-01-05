@@ -1,12 +1,60 @@
 // Tips.js
-import * as React from 'react';
-import { Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Container, Box, Tabs, Tab, Typography } from '@mui/material';
+import FindingHousing from './FindingHousing';
+import NIEAppointments from './NIEAppointments';
+import MadridTransportation from './MadridTransportation';
 
-export default function Tips() {
-  return (
-    <div>
-      <Typography variant="h3">Tips and Tricks</Typography>
+const TabPanel = (props) => {
+    const { children, value, index, ...other } = props;
 
-    </div>
-  );
-}
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`tabpanel-${index}`}
+            aria-labelledby={`tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+};
+
+const Tips = () => {
+    const [value, setValue] = useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    return (
+        <Container maxWidth="md">
+            <Box sx={{ my: 4 }}>
+                <Typography variant="h4" component="h1" gutterBottom>
+                    Tips and Tricks
+                </Typography>
+                <Tabs value={value} onChange={handleChange} aria-label="tips and tricks tabs">
+                    <Tab label="Finding Housing" />
+                    <Tab label="NIE Appointments" />
+                    <Tab label="Madrid Transportation" />
+                </Tabs>
+                <TabPanel value={value} index={0}>
+                    <FindingHousing />
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                    <NIEAppointments />
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                    <MadridTransportation />
+                </TabPanel>
+            </Box>
+        </Container>
+    );
+};
+
+export default Tips;
