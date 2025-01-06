@@ -3,10 +3,10 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import food from './assets/main-page-images/food.jpg';
-import recommendations from './assets/main-page-images/recommendations.jpg';
-import things from './assets/main-page-images/things.jpg';
-import tips from './assets/main-page-images/tips.jpg';
+import food from './assets/food.jpg';
+import recommendations from './assets/recommendations.jpg';
+import things from './assets/things.jpg';
+import tips from './assets/tips.jpg';
 
 import { Link } from 'react-router-dom';
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header';
-import Home from './Home'; 
-import ThingsToDo from './ThingsToDo';
-import Recommendations from './Recommendations';
-import Tips from './Tips';
-import Food from './Food';
+import Home from './Pages/Home'; 
+import ThingsToDo from './Pages/ThingsToDo';
+import Recommendations from './Pages/Recommendations';
+import Tips from './Pages/Tips';
+import Food from './Pages/Food';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import us from './assets/main-page-images/us.jpg';
+import us from './assets/us.jpg';
 
 
 export default function ImageWithText() {

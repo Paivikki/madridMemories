@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Typography } from '@mui/material';
-import ImageButton from './ImageButton';
-import ImageWithText from './ImageWithText';
+import ImageButton from '../Components/Home/ImageButton';
+import ImageWithText from '../Components/Home/ImageWithText';
 
 export default function HomePage() {
   return (

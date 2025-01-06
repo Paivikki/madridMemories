@@ -1,9 +1,9 @@
 // Tips.js
 import React, { useState } from 'react';
 import { Container, Box, Tabs, Tab, Typography } from '@mui/material';
-import FindingHousing from './FindingHousing';
-import NIEAppointments from './NIEAppointments';
-import MadridTransportation from './MadridTransportation';
+import FindingHousing from '../Components/Tips/FindingHousing';
+import NIEAppointments from '../Components/Tips/NIEAppointments';
+import MadridTransportation from '../Components/Tips/MadridTransportation';
 
 const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
