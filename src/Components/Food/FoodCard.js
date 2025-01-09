@@ -27,7 +27,7 @@ export default function MediaCard({ image, title, text, onShare, rating, categor
         <Rating name="read-only" value={rating} readOnly />
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={onShare}>Share</Button>
+        <Button size="small" onClick={onShare}>Get direction!</Button>
       </CardActions>
     </Card>
   );
