@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import Rating from '@mui/material/Rating';
 import { Margin } from '@mui/icons-material';
+import { Link } from '@mui/material';
 
 export default function MediaCard({ image, title, text, onShare, rating, category }) {
   return (
@@ -29,7 +30,7 @@ export default function MediaCard({ image, title, text, onShare, rating, categor
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={onShare}>Get direction!</Button>
+        <Button size="small" href={onShare} target="_blank" aria-label="Open location in Google Maps.">Get direction!</Button>
       </CardActions>
     </Card>
   );
