@@ -1,22 +1,40 @@
-// ThingsToDoPage.js
 import * as React from 'react';
-import { Typography } from '@mui/material';
-
-//new
-import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton';
+import { Typography, styled } from '@mui/material';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import PropTypes from 'prop-types';
 
+// Styled components for table cells and rows
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
+
+// Data creation function
 function createData(category, name, address, openingHours, price, timeSpent, highlights, resources) {
   return {
     category,
@@ -28,17 +46,17 @@ function createData(category, name, address, openingHours, price, timeSpent, hig
     highlights,
     resources,
   };
-} 
+}
 
-
+// Row component for collapsible rows
 function Row(props) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
 
   return (
     <React.Fragment>
-      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-        <TableCell>
+      <StyledTableRow>
+        <StyledTableCell>
           <IconButton
             aria-label="expand row"
             size="small"
@@ -46,24 +64,24 @@ function Row(props) {
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
-        </TableCell>
-        <TableCell component="th" scope="row">
+        </StyledTableCell>
+        <StyledTableCell component="th" scope="row">
           {row.category}
-        </TableCell>
-        <TableCell align="right">{row.name}</TableCell>
-        <TableCell align="right">{row.address}</TableCell>
-        <TableCell align="right">{row.openingHours}</TableCell>
-        <TableCell align="right">{row.price}</TableCell>
-        <TableCell align="right">{row.timeSpent}</TableCell>
-        <TableCell align="right">{row.highlights}</TableCell>
-        <TableCell align="right">
+        </StyledTableCell>
+        <StyledTableCell align="right">{row.name}</StyledTableCell>
+        <StyledTableCell align="right">{row.address}</StyledTableCell>
+        <StyledTableCell align="right">{row.openingHours}</StyledTableCell>
+        <StyledTableCell align="right">{row.price}</StyledTableCell>
+        <StyledTableCell align="right">{row.timeSpent}</StyledTableCell>
+        <StyledTableCell align="right">{row.highlights}</StyledTableCell>
+        <StyledTableCell align="right">
           <a href={row.resources} target="_blank" rel="noopener noreferrer">
             Link
           </a>
-        </TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
+        </StyledTableCell>
+      </StyledTableRow>
+      <StyledTableRow>
+        <StyledTableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="body1" gutterBottom>
@@ -71,8 +89,8 @@ function Row(props) {
               </Typography>
             </Box>
           </Collapse>
-        </TableCell>
-      </TableRow>
+        </StyledTableCell>
+      </StyledTableRow>
     </React.Fragment>
   );
 }
@@ -90,7 +108,7 @@ Row.propTypes = {
   }).isRequired,
 };
 
-
+// Example rows
 const rows = [
   createData('Museum', 'Museo del Prado', 'Calle de Felipe IV, s/n, 28014 Madrid', '10:00 AM - 8:00 PM', '€15', '2-3 hours', 'Famous art collection, Velázquez, Goya', 'https://www.museodelprado.es'),
   createData('Park', 'Retiro Park', 'Plaza de la Independencia, 7, 28001 Madrid', '6:00 AM - 10:00 PM', 'Free', '1-2 hours', 'Beautiful gardens, boating lake, Crystal Palace', 'https://www.esmadrid.com/informacion-turistica/parque-del-retiro'),
@@ -104,6 +122,7 @@ const rows = [
   createData('Church', 'Almudena Cathedral', 'Calle de Bailén, 10, 28013 Madrid', '9:00 AM - 8:00 PM', 'Free', '1 hour', 'Gothic and neo-Romanesque architecture', 'https://www.catedralalmudena.es'),
 ];
 
+// Main component
 export default function ThingsToDoPage() {
   return (
     <div>
@@ -114,19 +133,19 @@ export default function ThingsToDoPage() {
         Here you can find some of the things that we did in Madrid together with some practical information and a short description. Have fun to go do it yourself!
       </Typography>
 
-      <TableContainer component={Paper} style={{ padding: '3rem', maxWidth: "fit-content"}}>
+      <TableContainer component={Paper} style={{ padding: '3rem', maxWidth: "fit-content" }}>
         <Table aria-label="collapsible table">
           <TableHead>
             <TableRow>
-              <TableCell />
-              <TableCell>Category</TableCell>
-              <TableCell align="right">Name</TableCell>
-              <TableCell align="right">Address</TableCell>
-              <TableCell align="right">Opening Hours</TableCell>
-              <TableCell align="right">Price</TableCell>
-              <TableCell align="right">Time Spent</TableCell>
-              <TableCell align="right">Highlights</TableCell>
-              <TableCell align="right">Resources</TableCell>
+              <StyledTableCell />
+              <StyledTableCell>Category</StyledTableCell>
+              <StyledTableCell align="right">Name</StyledTableCell>
+              <StyledTableCell align="right">Address</StyledTableCell>
+              <StyledTableCell align="right">Opening Hours</StyledTableCell>
+              <StyledTableCell align="right">Price</StyledTableCell>
+              <StyledTableCell align="right">Time Spent</StyledTableCell>
+              <StyledTableCell align="right">Highlights</StyledTableCell>
+              <StyledTableCell align="right">Resources</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
