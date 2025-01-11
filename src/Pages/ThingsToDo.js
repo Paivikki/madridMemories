@@ -76,7 +76,7 @@ function Row(props) {
         <StyledTableCell align="right">{row.highlights}</StyledTableCell>
         <StyledTableCell align="right">
           <a href={row.resources} target="_blank" rel="noopener noreferrer">
-            Link
+            Website {row.name}
           </a>
         </StyledTableCell>
       </StyledTableRow>
