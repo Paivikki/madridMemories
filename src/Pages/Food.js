@@ -125,7 +125,7 @@ export default function Food() {
   const uniqueCategories = Array.from(new Set(cardsData.map((card) => card.category)));
 
   return (
-    <div>
+    <div style={{ marginBottom: '4rem'}}>
       <Typography variant="h2" align="left" gutterBottom style={{ marginTop: "4rem", marginLeft: "3rem", marginRight: '3rem' }}>
         Food & Drink Spots
       </Typography>
