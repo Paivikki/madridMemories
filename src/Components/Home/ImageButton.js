@@ -105,21 +105,17 @@ export default function ImageButton() {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
-        <Link
-          to={image.to}
-          key={image.title}
-          style={{
-            textDecoration: 'none', // Remove underline
-            width: '50%', // Ensure width matches the button
-            display: 'inline-block', // Maintain layout consistency
-          }}
-        >
           <ImageButtonBase
             focusRipple
             key={image.title}
             style={{
-              width: image.width,
+              //width: image.width,
+              textDecoration: 'none', // Remove underline
+              width: '50%', // Ensure width matches the button
+              display: 'inline-block', // Maintain layout consistency
+          
             }}
+            href={image.to}
           >
             <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
             <ImageBackdrop className="MuiImageBackdrop-root" />
@@ -141,7 +137,6 @@ export default function ImageButton() {
               </Typography>
             </Image>
           </ImageButtonBase>
-        </Link>
       ))}
     </Box>
   );
