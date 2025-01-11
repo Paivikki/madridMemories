@@ -105,38 +105,38 @@ export default function ImageButton() {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
-          <ImageButtonBase
-            focusRipple
-            key={image.title}
-            style={{
-              //width: image.width,
-              textDecoration: 'none', // Remove underline
-              width: '50%', // Ensure width matches the button
-              display: 'inline-block', // Maintain layout consistency
-          
-            }}
-            href={image.to}
-          >
-            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} aria-hidden="true" />
-            <ImageBackdrop className="MuiImageBackdrop-root" />
-            <Image>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                sx={(theme) => ({
-                  position: 'relative',
-                  p: 4,
-                  pt: 2,
-                  pb: `calc(${theme.spacing(1)} + 6px)`,
-                })}
-                style={{ background: "black" }}
-              >
-                {image.title}
-                <ImageMarked className="MuiImageMarked-root" />
-              </Typography>
-            </Image>
-          </ImageButtonBase>
+        <ImageButtonBase
+          focusRipple
+          key={image.title}
+          style={{
+            //width: image.width,
+            textDecoration: 'none', // Remove underline
+            width: '50%', // Ensure width matches the button
+            display: 'inline-block', // Maintain layout consistency
+
+          }}
+          href={image.to}
+          aria-label={`Go to ${image.title} page`}
+        >
+          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+          <ImageBackdrop className="MuiImageBackdrop-root" /> 
+          <Image >
+            <Typography
+              // component="span"
+              // variant="subtitle1"
+              // color="inherit"
+              sx={(theme) => ({
+                position: 'relative',
+                p: 4,
+                pt: 2,
+                pb: `calc(${theme.spacing(1)} + 6px)`,
+              })}
+              style={{ background: "black" }}
+            >
+              {image.title}
+            </Typography>
+          </Image>
+        </ImageButtonBase>
       ))}
     </Box>
   );
