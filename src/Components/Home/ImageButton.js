@@ -117,7 +117,7 @@ export default function ImageButton() {
             }}
             href={image.to}
           >
-            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} aria-hidden="true" />
             <ImageBackdrop className="MuiImageBackdrop-root" />
             <Image>
               <Typography
