@@ -107,14 +107,14 @@ const rows = [
 export default function ThingsToDoPage() {
   return (
     <div>
-      <Typography variant="h2" align="left" gutterBottom style={{ marginTop: '4rem', marginLeft: '3rem' }}>
+      <Typography variant="h2" align="left" gutterBottom style={{ marginTop: '4rem', marginLeft: '3rem', marginRight: '3rem' }}>
         Things We Did
       </Typography>
-      <Typography variant="h6" align="left" gutterBottom style={{ marginTop: '1rem', marginLeft: '3rem' }}>
+      <Typography variant="h6" align="left" gutterBottom style={{ marginTop: '1rem', marginLeft: '3rem', marginRight: '3rem' }}>
         Here you can find some of the things that we did in Madrid together with some practical information and a short description. Have fun to go do it yourself!
       </Typography>
 
-      <TableContainer component={Paper} style={{ margin: '2rem', padding: '1rem', maxWidth: "fit-content"}}>
+      <TableContainer component={Paper} style={{ padding: '3rem', maxWidth: "fit-content"}}>
         <Table aria-label="collapsible table">
           <TableHead>
             <TableRow>

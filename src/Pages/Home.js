@@ -21,7 +21,7 @@ export default function HomePage() {
         Food
       </Button> */}
       <ImageButton></ImageButton>
-      <Typography variant="h2" style={{ marginTop: "3rem", marginLeft: "3rem" }}>About Us</Typography>
+      <Typography variant="h2" style={{ marginTop: "3rem", marginLeft: "3rem", marginRight: '3rem' }}>About Us</Typography>
       <ImageWithText></ImageWithText>
     </div>
   );

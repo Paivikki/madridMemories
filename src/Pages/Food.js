@@ -126,10 +126,10 @@ export default function Food() {
 
   return (
     <div>
-      <Typography variant="h2" align="left" gutterBottom style={{ marginTop: "4rem", marginLeft: "3rem" }}>
+      <Typography variant="h2" align="left" gutterBottom style={{ marginTop: "4rem", marginLeft: "3rem", marginRight: '3rem' }}>
         Food & Drink Spots
       </Typography>
-      <Typography variant="h6" align="left" gutterBottom style={{ marginTop: "1rem", marginLeft: "3rem" }}>
+      <Typography variant="h6" align="left" gutterBottom style={{ marginTop: "1rem", marginLeft: "3rem", marginRight: '3rem' }}>
         Here you can find some of the culinary spots that we visited in Madrid together with our thoughts on it. Have fun to try them out yourself!:D If you are looking for something specific, use the filters to find it faster.
       </Typography>
       {/* Filter Chips */}
