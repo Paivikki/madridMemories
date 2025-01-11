@@ -31,9 +31,15 @@ const Recommendations = () => {
     return (
         <Container maxWidth="sm">
             <Box sx={{ my: 4 }}>
-                <Typography variant="h4" component="h1" gutterBottom>
+            <Typography variant="h2" align="left" gutterBottom style={{ marginTop: "4rem", marginLeft: "3rem" }}>
+            Submit Your Recommendations!
+            </Typography>
+            <Typography variant="h6" align="left" gutterBottom style={{ marginTop: "1rem", marginLeft: "3rem" }}>
+                Use the Following Form to submit any places and things you love in Madrid and we might feature them on our site!!
+            </Typography>
+                {/* <Typography variant="h4" component="h1" gutterBottom>
                     Submit a Recommendation!
-                </Typography>
+                </Typography> */}
                 <form onSubmit={handleSubmit}>
                     <TextField
                         fullWidth

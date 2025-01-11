@@ -34,10 +34,18 @@ const Tips = () => {
 
     return (
         <Container maxWidth="md">
-            <Box sx={{ my: 4 }}>
-                <Typography variant="h4" component="h1" gutterBottom>
+            {/* <Container > */}
+            <Box>
+            {/* <Box sx={{ my: 4 }}> */}
+                <Typography variant="h2" align="left" gutterBottom style={{ marginTop: "4rem", marginLeft: "3rem" }}>
                     Tips and Tricks
                 </Typography>
+                <Typography variant="h6" align="left" gutterBottom style={{ marginTop: "1rem", marginLeft: "3rem" }}>
+                    Here you can find some general tips and tricks if you are moving to the city for the first time, or just new to navigating around Madrd!
+                </Typography>
+                {/* <Typography variant="h4" component="h1" gutterBottom>
+                    Tips and Tricks
+                </Typography> */}
                 <Tabs value={value} onChange={handleChange} aria-label="tips and tricks tabs">
                     <Tab label="Finding Housing" />
                     <Tab label="NIE Appointments" />
