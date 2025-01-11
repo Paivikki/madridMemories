@@ -42,9 +42,9 @@ const Header = () => {
                     onClose={handleClose}
                 >
                     <MenuItem onClick={handleClose} component={Link} to="/">Home</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} to="/tips">Tips and Tricks</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/food">Food Recommendations</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} to="/things-to-do">Things We Did</MenuItem>
+                    <MenuItem onClick={handleClose} component={Link} to="/things-to-do">Things to do</MenuItem>
+                    <MenuItem onClick={handleClose} component={Link} to="/tips">Tips and Tricks</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/recommendations">Submit Recommendations</MenuItem>
                 </Menu>
                 <Typography variant="h6" style={{ flexGrow: 1 }}>

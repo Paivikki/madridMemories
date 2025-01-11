@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const images = [
   {
     url: food,
-    title: 'Food',
+    title: 'Food Recommendations',
     width: '100%',
     to: '/food',
   },
@@ -25,13 +25,13 @@ const images = [
   },
   {
     url: tips,
-    title: 'Tips',
+    title: 'Tips and Tricks',
     width: '100%',
     to: '/tips',
   },
   {
     url: recommendations,
-    title: 'Your Recommendation',
+    title: 'Submit Recommendations',
     width: '100%',
     to: '/recommendations',
   },
