@@ -114,7 +114,7 @@ export default function ThingsToDoPage() {
         Here you can find some of the things that we did in Madrid together with some practical information and a short description. Have fun to go do it yourself!
       </Typography>
 
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} style={{ margin: '2rem', padding: '1rem', maxWidth: "fit-content"}}>
         <Table aria-label="collapsible table">
           <TableHead>
             <TableRow>
