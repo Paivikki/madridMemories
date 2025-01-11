@@ -125,15 +125,15 @@ export default function Food() {
   const uniqueCategories = Array.from(new Set(cardsData.map((card) => card.category)));
 
   return (
-    <div style={{ marginBottom: '4rem'}}>
+    <div style={{ marginBottom: '4rem' }}>
       <Typography variant="h2" align="left" gutterBottom style={{ marginTop: "4rem", marginLeft: "3rem", marginRight: '3rem' }}>
         Food & Drink Spots
       </Typography>
       <Typography variant="h6" align="left" gutterBottom style={{ marginTop: "1rem", marginLeft: "3rem", marginRight: '3rem' }}>
-        Here you can find some of the culinary spots that we visited in Madrid together with our thoughts on it. Have fun to try them out yourself!:D If you are looking for something specific, use the filters to find it faster.
+        Here you can find some of the culinary spots that we visited in Madrid together with our thoughts on it. Have fun to try them out yourself!:D If you are looking for something specific, use the filters to find it faster. The content will change dynamically when a filter button is pressed. 
       </Typography>
       {/* Filter Chips */}
-      <Box
+      {/* <Box
         sx={{
           display: 'flex',
           justifyContent: 'left',
@@ -156,7 +156,40 @@ export default function Food() {
         <Button variant="outlined" onClick={() => setSelectedCategory(null)}>
           Clear Filter
         </Button>
+      </Box> */}
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'left',
+          marginLeft: '3rem',
+          marginTop: '1rem',
+          gap: 2,
+          mb: 3,
+          flexWrap: 'wrap',
+        }}
+      >
+
+        {uniqueCategories.map((category) => (
+          <Chip
+            key={category}
+            label={category}
+            onClick={() => setSelectedCategory(category === selectedCategory ? null : category)}
+            color={selectedCategory === category ? 'primary' : 'default'}
+            clickable
+            role="button"
+            aria-pressed={selectedCategory === category}
+            aria-describedby="filter-instructions" // Associates the chip with the instructions
+          />
+        ))}
+        <Button
+          variant="outlined"
+          onClick={() => setSelectedCategory(null)}
+          aria-label="Clear all filters"
+        >
+          Clear Filter
+        </Button>
       </Box>
+
 
       {/* Cards */}
       <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
