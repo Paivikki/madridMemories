@@ -36,8 +36,8 @@ const Tips = () => {
         <Container maxWidth="md">
             {/* <Container > */}
             <Box>
-            {/* <Box sx={{ my: 4 }}> */}
-                <Typography variant="title"  sx={{
+                {/* <Box sx={{ my: 4 }}> */}
+                <Typography variant="title" sx={{
                     marginTop: '4rem',
                     marginLeft: '0rem',
                     marginRight: '0rem',
@@ -45,19 +45,39 @@ const Tips = () => {
                     fontWeight: 500,
                     lineHeight: 1.2,
                     textAlign: 'left',
-                    }}>
-                        Tips and Tricks
+                }}>
+                    Tips and Tricks
                 </Typography>
-                <Typography variant="body1" sx={{ align: 'left', marginTop: "1rem", marginLeft: "0rem", marginRight: '0rem', marginBottom: '2rem',   }}>
+                <Typography variant="body1" sx={{ align: 'left', marginTop: "1rem", marginLeft: "0rem", marginRight: '0rem', marginBottom: '2rem', }}>
                     Here you can find some general tips and tricks if you are moving to the city for the first time, or just new to navigating around Madrd!
                 </Typography>
-                {/* <Typography variant="h4" component="h1" gutterBottom>
-                    Tips and Tricks
-                </Typography> */}
-                <Tabs value={value} onChange={handleChange} aria-label="tips and tricks tabs">
-                    <Tab label="Finding Housing" />
-                    <Tab label="NIE Appointments" />
-                    <Tab label="Madrid Transportation" />
+                <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    aria-label="Tips and Tricks tabs"
+                    role="tablist"
+                >
+                    <Tab
+                        label="Finding Housing"
+                        id="tab-0"
+                        aria-controls="tabpanel-0"
+                        aria-selected={value === 0}
+                        tabIndex={value === 0 ? 0 : -1}
+                    />
+                    <Tab
+                        label="NIE Appointments"
+                        id="tab-1"
+                        aria-controls="tabpanel-1"
+                        aria-selected={value === 1}
+                        tabIndex={value === 1 ? 0 : -1}
+                    />
+                    <Tab
+                        label="Madrid Transportation"
+                        id="tab-2"
+                        aria-controls="tabpanel-2"
+                        aria-selected={value === 2}
+                        tabIndex={value === 2 ? 0 : -1}
+                    />
                 </Tabs>
                 <TabPanel value={value} index={0}>
                     <FindingHousing />

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-padding-top: 60px; /* Adds 60px padding to the top of the page when scrolling */
 }
 
 code {
