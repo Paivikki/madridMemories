@@ -127,7 +127,7 @@ export default function Food() {
 
   return (
     <div style={{ marginBottom: '4rem' }}>
-      <Typography variant="h1"  sx={{
+      <Typography variant="title"  sx={{
           marginTop: '4rem',
           marginLeft: '3rem',
           marginRight: '3rem',

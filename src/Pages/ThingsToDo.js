@@ -126,7 +126,7 @@ const rows = [
 export default function ThingsToDoPage() {
   return (
     <div>
-       <Typography variant="h1"  sx={{
+       <Typography variant="title"  sx={{
           marginTop: '4rem',
           marginLeft: '3rem',
           marginRight: '3rem',

@@ -37,7 +37,7 @@ const Tips = () => {
             {/* <Container > */}
             <Box>
             {/* <Box sx={{ my: 4 }}> */}
-                <Typography variant="h1"  sx={{
+                <Typography variant="title"  sx={{
                     marginTop: '4rem',
                     marginLeft: '0rem',
                     marginRight: '0rem',

@@ -22,7 +22,7 @@ export default function HomePage() {
         Food
       </Button> */}
       <ImageButton></ImageButton>
-      <Typography variant="h1"  sx={{
+      <Typography variant="title"  sx={{
           marginTop: '4rem',
           marginLeft: '2rem',
           marginRight: '3rem',

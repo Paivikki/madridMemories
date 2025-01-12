@@ -31,7 +31,7 @@ const Recommendations = () => {
     return (
         <Container maxWidth="sm">
             <Box sx={{ my: 4 }}>
-            <Typography variant="h1" sx={{
+            <Typography variant="title" sx={{
                 marginTop: '4rem',
                 marginLeft: '0rem',
                 marginRight: '0rem',
@@ -40,7 +40,7 @@ const Recommendations = () => {
                 lineHeight: 1.2,
                 textAlign: 'left',
                 }}>
-                Submit Your Recommendations!
+                Submit Your Recommendations
             </Typography>
             <Typography variant="body1"  gutterBottom style={{ align:'left', marginTop: "1rem", marginLeft: "0rem", marginRight: '0rem', marginBottom: '2rem',  }}>
                 Use the Following Form to submit any places and things you love in Madrid and we might feature them on our site!!
