@@ -37,10 +37,18 @@ const Tips = () => {
             {/* <Container > */}
             <Box>
             {/* <Box sx={{ my: 4 }}> */}
-                <Typography variant="h2" align="left" gutterBottom style={{ marginTop: "4rem", marginLeft: "3rem" }}>
-                    Tips and Tricks
+                <Typography variant="h1"  sx={{
+                    marginTop: '4rem',
+                    marginLeft: '0rem',
+                    marginRight: '0rem',
+                    fontSize: '3.75rem',
+                    fontWeight: 500,
+                    lineHeight: 1.2,
+                    textAlign: 'left',
+                    }}>
+                        Tips and Tricks
                 </Typography>
-                <Typography variant="h6" align="left" gutterBottom style={{ marginTop: "1rem", marginLeft: "3rem" }}>
+                <Typography variant="body1" sx={{ align: 'left', marginTop: "1rem", marginLeft: "0rem", marginRight: '0rem', marginBottom: '2rem',   }}>
                     Here you can find some general tips and tricks if you are moving to the city for the first time, or just new to navigating around Madrd!
                 </Typography>
                 {/* <Typography variant="h4" component="h1" gutterBottom>
