@@ -33,7 +33,7 @@ const Tips = () => {
     };
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="med">
             {/* <Container > */}
             <Box>
                 {/* <Box sx={{ my: 4 }}> */}

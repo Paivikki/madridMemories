@@ -51,7 +51,7 @@ const Recommendations = () => {
     };
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="med">
             <Box sx={{ my: 4 }}>
                 <Typography variant="title" sx={{
                     marginTop: '4rem',
@@ -70,6 +70,7 @@ const Recommendations = () => {
                 {/* <Typography variant="h4" component="h1" gutterBottom>
                     Submit a Recommendation!
                 </Typography> */}
+                <Container  maxWidth="sm">
                 <form onSubmit={handleSubmit} aria-label="Form for submitting recommendations">
                     <TextField
                         fullWidth
@@ -172,7 +173,9 @@ const Recommendations = () => {
                         </Table>
                     </TableContainer>
                 </Box>
+                </Container>
             </Box>
+            
         </Container>
     );
 };
