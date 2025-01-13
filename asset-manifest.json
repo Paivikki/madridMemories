@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/madridMemories/static/css/main.a205ff64.css",
+    "main.js": "/madridMemories/static/js/main.16366a67.js",
+    "static/js/488.fb575143.chunk.js": "/madridMemories/static/js/488.fb575143.chunk.js",
+    "static/media/things.jpg": "/madridMemories/static/media/things.31a22520c6b4926b0317.jpg",
+    "static/media/recommendations.jpg": "/madridMemories/static/media/recommendations.a9c7f2778ff26d057bdb.jpg",
+    "static/media/tips.jpg": "/madridMemories/static/media/tips.b8c2e711cd0984b743d7.jpg",
+    "static/media/Frutas Prohibidas.jpg": "/madridMemories/static/media/Frutas Prohibidas.726753ba78db9bf7cceb.jpg",
+    "static/media/Chocolatería San Ginés.jpg": "/madridMemories/static/media/Chocolatería San Ginés.e34e585c036c0c04c7f6.jpg",
+    "static/media/ALCHEMY.jpg": "/madridMemories/static/media/ALCHEMY.f8ecaf731277cfa2cfc7.jpg",
+    "static/media/Pan y Pepinillos Café.jpg": "/madridMemories/static/media/Pan y Pepinillos Café.0e631febba84c39283d4.jpg",
+    "static/media/Salon Des Fleurs.jpg": "/madridMemories/static/media/Salon Des Fleurs.39240853189f31768362.jpg",
+    "static/media/Oveja Negra Vegana.jpg": "/madridMemories/static/media/Oveja Negra Vegana.2e3ee822aad3f29c384e.jpg",
+    "static/media/food.jpg": "/madridMemories/static/media/food.59128471c65205889d69.jpg",
+    "static/media/Mars l Vermut Madrid.jpg": "/madridMemories/static/media/Mars l Vermut Madrid.128623514d0532d2893f.jpg",
+    "static/media/Red Bar.jpg": "/madridMemories/static/media/Red Bar.461d2042addc35191446.jpg",
+    "static/media/EatMyTrip.jpg": "/madridMemories/static/media/EatMyTrip.385f430079a8b99d2530.jpg",
+    "static/media/UPM Cafeteria.jpg": "/madridMemories/static/media/UPM Cafeteria.2d1d7fb9dcfa0c4b2afb.jpg",
+    "static/media/Taberna Almería.jpg": "/madridMemories/static/media/Taberna Almería.12b47c9f77d716853900.jpg",
+    "static/media/us.jpg": "/madridMemories/static/media/us.3863f34f5768aca40e9d.jpg",
+    "static/media/NEXT LEVEL Arcade Bar.jpg": "/madridMemories/static/media/NEXT LEVEL Arcade Bar.c032b8052da7aec99e4d.jpg",
+    "static/media/logo.png": "/madridMemories/static/media/logo.b976e53a0126a6d403ce.png",
+    "index.html": "/madridMemories/index.html",
+    "main.a205ff64.css.map": "/madridMemories/static/css/main.a205ff64.css.map",
+    "main.16366a67.js.map": "/madridMemories/static/js/main.16366a67.js.map",
+    "488.fb575143.chunk.js.map": "/madridMemories/static/js/488.fb575143.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a205ff64.css",
+    "static/js/main.16366a67.js"
+  ]
+}
