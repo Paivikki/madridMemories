@@ -111,6 +111,7 @@ const Recommendations = () => {
                             }
                             
                             margin="normal"
+                            autoComplete="name"
                         />
                         <TextField
                             fullWidth
