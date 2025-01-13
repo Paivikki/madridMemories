@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, Button, Container, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem } from '@mui/material';
+import { TextField, Button, Container, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem, Alert } from '@mui/material';
 
 const Recommendations = () => {
     const [name, setName] = useState('');
@@ -8,8 +8,10 @@ const Recommendations = () => {
     const [links, setLinks] = useState('');
     const [type, setType] = useState('');
     const [recommendations, setRecommendations] = useState([]);
-    const [error, setError] = useState('');
     const [nameError, setNameError] = useState(false);
+    const [placeError, setPlaceError] = useState(false);
+    const [descriptionError, setDescriptionError] = useState(false);
+    const [error, setError] = useState(false);
 
 
     useEffect(() => {
@@ -20,7 +22,7 @@ const Recommendations = () => {
     }, []);
 
     const handleNameChange = e => {
-        setPlace(e.target.value);
+        setName(e.target.value);
         if (e.target.validity.valid) {
           setNameError(false);
         } else {
@@ -28,20 +30,40 @@ const Recommendations = () => {
         }
       };
 
+    const handlePlaceChange = e => {
+        setPlace(e.target.value);
+        if (e.target.validity.valid) {
+          setPlaceError(false);
+        } else {
+          setPlaceError(true);
+        }
+      };
+
+      const handleDescriptionChange = e => {
+        setDescription(e.target.value);
+        if (e.target.validity.valid) {
+          setDescriptionError(false);
+        } else {
+          setDescriptionError(true);
+        }
+      };
+
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        // if (!place || !description || !type) {
-        //     setError('You must include required fields before you can submit');
-        // } else {
-        //     setError('');
-        //     // Handle form submission
-        // }
-        if (event.target.checkValidity()) {
-            alert("Form is valid! Submitting the form...");
-          } else {
-            alert("Form is not valid! Check the required fields...");
-        }
+        event.preventDefault();     
+          if(!place){            
+            setError('You must include required fields before you can submit');
+            setPlaceError(true);
+          }
+          if (!description) {
+            setError('You must include required fields before you can submit');
+            setDescriptionError(true);
+          }
+        else {
+             alert("Thank you for your recommendation! Form Successfully Submitted");
+             setError(false);
+        
+
         const newRecommendation = { place, description, type };
         const updatedRecommendations = [...recommendations, newRecommendation];
         setRecommendations(updatedRecommendations);
@@ -52,6 +74,7 @@ const Recommendations = () => {
         setDescription('');
         setLinks('');
         setType('');
+        }
 
     };
 
@@ -73,40 +96,42 @@ const Recommendations = () => {
                     Use the Following Form to submit any places and things you love in Madrid and we might feature them on our site!!
                 </Typography>
                 <Container maxWidth="sm">
-                    <form onSubmit={handleSubmit} aria-label="Form for submitting recommendations">
+                    <form onSubmit={handleSubmit} aria-label="Form for submitting recommendations" noValidate>
                         <TextField
                             fullWidth
                             label="Your Name"
                             value={name}
-                            onChange={(e) => {
-                                const input = e.target.value;
-                                // Allow only letters (uppercase and lowercase), spaces, and optional accents
-                                const regex = /^[a-zA-Z\s]*$/;
-                                if (regex.test(input)) {
-                                    setName(input);
-                                }
+                            onChange={handleNameChange}
+                            error={nameError}
+                            inputProps={{
+                              pattern: "[A-Za-z ]+",
                             }}
+                            helperText={
+                              nameError ? "Please enter your name (letters and spaces only)" : ""
+                            }
+                            
                             margin="normal"
                         />
                         <TextField
                             fullWidth
                             label="Name of your recommendation (Required)"
                             value={place}
-                            onChange={handleNameChange}
-                            // onChange={(e) => setPlace(e.target.value)}
+                            onChange={handlePlaceChange}
                             margin="normal"
-                            error={nameError}
-                            helperText={nameError ? "Please enter the name of your recommendation" : ""}
+                            error={placeError}
+                            helperText={placeError ? "Please enter the name of your recommendation" : ""}
                             required
                         />
                         <TextField
                             fullWidth
                             label="A brief description of you recommendation (Required)"
                             value={description}
-                            onChange={(e) => setDescription(e.target.value)}
+                            onChange={handleDescriptionChange}
                             margin="normal"
                             multiline
                             rows={4}
+                            error={descriptionError}
+                            helperText={descriptionError ? "Please enter the description of your recommendation" : ""}
                             required
                         />
                         <TextField
@@ -124,10 +149,9 @@ const Recommendations = () => {
                             onChange={(e) => setType(e.target.value)}
                             displayEmpty
                             margin="normal"
-                            required
                         >
                             <MenuItem value="" disabled>
-                                Select the Type of Recommendation (Required) *
+                                Select the Type of Recommendation
                             </MenuItem>
                             <MenuItem value="Food">Food</MenuItem>
                             <MenuItem value="Museum">Museum</MenuItem>
@@ -140,7 +164,7 @@ const Recommendations = () => {
                                 {error}
                             </Typography>
                         )}
-                        <Button variant="contained" color="primary" type="submit" sx={{ mt: 2 }}>
+                        <Button variant="contained" color="primary" type="submit" sx={{ mt: 2 }} formnovalidate >
                             Submit
                         </Button>
                     </form>
