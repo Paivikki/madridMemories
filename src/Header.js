@@ -50,7 +50,6 @@ const Header = () => {
                 <Typography variant="h6" style={{ flexGrow: 1 }}>
                     Madrid Memories
                 </Typography>
-                <img src={logo} alt="Logo" style={{ height: '40px' }} />
             </Toolbar>
         </AppBar>
     );
