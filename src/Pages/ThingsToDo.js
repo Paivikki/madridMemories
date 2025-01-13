@@ -13,6 +13,7 @@ import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PropTypes from 'prop-types';
+import shadows from '@mui/material/styles/shadows';
 
 // Styled components for table cells and rows
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -68,13 +69,13 @@ function Row(props) {
         <StyledTableCell component="th" scope="row">
           {row.category}
         </StyledTableCell>
-        <StyledTableCell align="right">{row.name}</StyledTableCell>
-        <StyledTableCell align="right">{row.address}</StyledTableCell>
-        <StyledTableCell align="right">{row.openingHours}</StyledTableCell>
-        <StyledTableCell align="right">{row.price}</StyledTableCell>
-        <StyledTableCell align="right">{row.timeSpent}</StyledTableCell>
-        <StyledTableCell align="right">{row.highlights}</StyledTableCell>
-        <StyledTableCell align="right">
+        <StyledTableCell align="left">{row.name}</StyledTableCell>
+        <StyledTableCell align="left">{row.address}</StyledTableCell>
+        <StyledTableCell align="left">{row.openingHours}</StyledTableCell>
+        <StyledTableCell align="left">{row.price}</StyledTableCell>
+        <StyledTableCell align="left">{row.timeSpent}</StyledTableCell>
+        <StyledTableCell align="left">{row.highlights}</StyledTableCell>
+        <StyledTableCell align="left">
           <a href={row.resources} target="_blank" rel="noopener noreferrer">
             Website {row.name}
           </a>
@@ -141,19 +142,19 @@ export default function ThingsToDoPage() {
         Here you can find some of the things that we did in Madrid together with some practical information and a short description. Have fun to go do it yourself!
       </Typography>
 
-      <TableContainer component={Paper} style={{ padding: '3rem', maxWidth: "fit-content" }}>
+      <TableContainer style={{ padding: '3rem', maxWidth: "fit-content"}}>
         <Table aria-label="collapsible table">
           <TableHead>
             <TableRow>
               <StyledTableCell />
               <StyledTableCell>Category</StyledTableCell>
-              <StyledTableCell align="right">Name</StyledTableCell>
-              <StyledTableCell align="right">Address</StyledTableCell>
-              <StyledTableCell align="right">Opening Hours</StyledTableCell>
-              <StyledTableCell align="right">Price</StyledTableCell>
-              <StyledTableCell align="right">Time Spent</StyledTableCell>
-              <StyledTableCell align="right">Highlights</StyledTableCell>
-              <StyledTableCell align="right">Resources</StyledTableCell>
+              <StyledTableCell align="left">Name</StyledTableCell>
+              <StyledTableCell align="left">Address</StyledTableCell>
+              <StyledTableCell align="left">Opening Hours</StyledTableCell>
+              <StyledTableCell align="left">Price</StyledTableCell>
+              <StyledTableCell align="left">Time Spent</StyledTableCell>
+              <StyledTableCell align="left">Highlights</StyledTableCell>
+              <StyledTableCell align="left">Resources</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
