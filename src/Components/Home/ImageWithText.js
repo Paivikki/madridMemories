@@ -60,7 +60,7 @@ export default function ImageWithText() {
             late-night hangouts, we bring you a mix of local experiences and
             personal recommendations. Plus, we’ve got an interactive
             recommendation list where you can explore our must-visit places or
-            suggest your own!
+            suggest your own! Use the menu in the top left corner or the four links above with the headings 'Food Recommendations', 'Things to do', 'Tips and Tricks', and 'Submit Recommendations' to navigate to the desired information. 
           </Typography>
           <Typography variant="body1" style={{ marginTop: "1rem" }}>
             Whether you’re a fellow student, a traveler, or just curious about

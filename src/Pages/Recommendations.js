@@ -93,7 +93,7 @@ const Recommendations = () => {
                     Submit Your Recommendations
                 </Typography>
                 <Typography variant="body1" gutterBottom style={{ align: 'left', marginTop: "1rem", marginLeft: "0rem", marginRight: '0rem', marginBottom: '2rem', }}>
-                    Use the Following Form to submit any places and things you love in Madrid and we might feature them on our site!!
+                    Use the following form to submit any places and things you love in Madrid and we might feature them on our site!! To submit the form, press the squared button labeled "SUBMIT".
                 </Typography>
                 <Container maxWidth="sm">
                     <form onSubmit={handleSubmit} aria-label="Form for submitting recommendations" noValidate>
