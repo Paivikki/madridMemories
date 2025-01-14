@@ -58,6 +58,8 @@ const Tips = () => {
                     onChange={handleChange}
                     aria-label="Tips and Tricks tabs"
                     role="tablist"
+                    variant="scrollable"
+                    scrollButtons="auto"
                 >
                     <Tab
                         label="Finding Housing"
