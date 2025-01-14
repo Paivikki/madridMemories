@@ -105,7 +105,6 @@ export default function ImageButton() {
 
           }}
           href={image.to}
-          aria-label={`Go to ${image.title} page`}
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" /> 
@@ -123,7 +122,7 @@ export default function ImageButton() {
                 color: '#10579E',
                 background: 'white',
               })}
-              // style={{ background: "white", color: "blue"}}
+              aria-label={image.title}
             >
               {image.title}
             </Typography>
