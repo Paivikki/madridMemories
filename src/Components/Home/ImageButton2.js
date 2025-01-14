@@ -119,7 +119,7 @@ export default function ImageButton() {
                 pt: 2,
                 pb: `calc(${theme.spacing(1)} + 6px)`,
                 textDecoration: 'underline',
-                color: 'blue',
+                color: '#10579E',
                 background: 'white',
               })}
             >
