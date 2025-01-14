@@ -42,8 +42,8 @@ const Header = () => {
                     onClose={handleClose}
                 >
                     <MenuItem onClick={handleClose} component={Link} to="/">Home</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} to="/food">Food Recommendations</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} to="/things-to-do">Things We Did</MenuItem>
+                    <MenuItem onClick={handleClose} component={Link} to="/food">Food and Drink Spots</MenuItem>
+                    <MenuItem onClick={handleClose} component={Link} to="/things-to-do">Things To Do</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/tips">Tips and Tricks</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/recommendations">Submit Your Recommendations</MenuItem>
                 </Menu>

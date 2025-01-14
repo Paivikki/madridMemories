@@ -12,18 +12,6 @@ import { Link } from 'react-router-dom';
 
 const images = [
   {
-    url: food,
-    title: 'Food Recommendations',
-    width: '100%',
-    to: '/food',
-  },
-  {
-    url: things,
-    title: 'Things to do',
-    width: '100%',
-    to: '/things-to-do',
-  },
-  {
     url: tips,
     title: 'Tips and Tricks',
     width: '100%',
@@ -130,8 +118,10 @@ export default function ImageButton() {
                 p: 4,
                 pt: 2,
                 pb: `calc(${theme.spacing(1)} + 6px)`,
+                textDecoration: 'underline',
+                color: '#10579E',
+                background: 'white',
               })}
-              style={{ background: "black" }}
             >
               {image.title}
             </Typography>

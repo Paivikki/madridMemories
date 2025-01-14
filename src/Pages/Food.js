@@ -136,10 +136,10 @@ export default function Food() {
           lineHeight: 1.2,
           textAlign: 'left',
         }}>
-        Food & Drink Spots
+        Food and Drink Spots
       </Typography>
       <Typography variant="body1" align="left" gutterBottom style={{ marginTop: "1rem", marginLeft: "3rem", marginRight: '3rem', marginBottom: '2rem',  }}>
-        Here you can find some of the culinary spots that we visited in Madrid together with our thoughts on it. Have fun to try them out yourself!:D If you are looking for something specific, use the filters to find it faster. The content will change dynamically when a filter button is pressed. 
+        Here you can find some of the culinary spots that we visited in Madrid together with our thoughts on it. Have fun to try them out yourself!:D If you are looking for something specific, use the round gray filters labeled "Filter for ..." to find it faster. The content will change dynamically when a filter button is pressed. 
       </Typography>
   
       <Box
