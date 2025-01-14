@@ -34,7 +34,7 @@ export default function ImageWithText() {
         <Box
           component="img"
           src={us} // Replace with your image URL
-          alt="Example Image"
+          alt=""
           sx={{
             width: { xs: "100%", md: "50%" }, // Full width on small screens, half width on larger
             maxHeight: "300px", // Optional: Limit the height
