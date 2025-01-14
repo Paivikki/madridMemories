@@ -16,13 +16,13 @@ const images = [
     url: food,
     title: 'Food and Drink Spots',
     width: '100%',
-    to: '/#/food',
+    to: '/madridMemories/#/food',
   },
   {
     url: things,
     title: 'Things To Do',
     width: '100%',
-    to: '/#/things-to-do',
+    to: '/madridMemories/#/things-to-do',
   },
 ];
 
