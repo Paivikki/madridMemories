@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/madridMemories/static/css/main.6a03368b.css",
-    "main.js": "/madridMemories/static/js/main.f548a5fe.js",
+    "main.js": "/madridMemories/static/js/main.f08d9449.js",
     "static/js/488.fb575143.chunk.js": "/madridMemories/static/js/488.fb575143.chunk.js",
     "static/media/things.jpg": "/madridMemories/static/media/things.31a22520c6b4926b0317.jpg",
     "static/media/recommendations.jpg": "/madridMemories/static/media/recommendations.a9c7f2778ff26d057bdb.jpg",
@@ -23,11 +23,11 @@
     "static/media/logo.png": "/madridMemories/static/media/logo.b976e53a0126a6d403ce.png",
     "index.html": "/madridMemories/index.html",
     "main.6a03368b.css.map": "/madridMemories/static/css/main.6a03368b.css.map",
-    "main.f548a5fe.js.map": "/madridMemories/static/js/main.f548a5fe.js.map",
+    "main.f08d9449.js.map": "/madridMemories/static/js/main.f08d9449.js.map",
     "488.fb575143.chunk.js.map": "/madridMemories/static/js/488.fb575143.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a03368b.css",
-    "static/js/main.f548a5fe.js"
+    "static/js/main.f08d9449.js"
   ]
 }
