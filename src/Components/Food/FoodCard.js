@@ -30,7 +30,7 @@ export default function MediaCard({ image, title, text, onShare, rating, categor
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" sx={{minHeight: 27}} href={onShare} target="_blank" aria-label="Open location in Google Maps.">Open location in Google Maps.</Button>
+        <Button size="small" sx={{minHeight: 27}} href={onShare} target="_blank">Open location in Google Maps</Button>
       </CardActions>
     </Card>
   );
