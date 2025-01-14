@@ -4,6 +4,7 @@ import { Container, Box, Tabs, Tab, Typography } from '@mui/material';
 import FindingHousing from '../Components/Tips/FindingHousing';
 import NIEAppointments from '../Components/Tips/NIEAppointments';
 import MadridTransportation from '../Components/Tips/MadridTransportation';
+import useDocumentTitle from '../useDocumentTitle';
 
 const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -27,6 +28,7 @@ const TabPanel = (props) => {
 
 const Tips = () => {
     const [value, setValue] = useState(0);
+    useDocumentTitle('Tips and Tricks - Madrid Memories');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -37,7 +39,7 @@ const Tips = () => {
             {/* <Container > */}
             <Box>
                 {/* <Box sx={{ my: 4 }}> */}
-                <Typography variant="title" sx={{
+                <Typography variant="h1" sx={{
                     marginTop: '4rem',
                     marginLeft: '0rem',
                     marginRight: '0rem',

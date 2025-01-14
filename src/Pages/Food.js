@@ -13,9 +13,13 @@ import TabernaAlmeria from '../Components/Food/assets/Taberna Almería.jpg';
 import UPMCafeteria from '../Components/Food/assets/UPM Cafeteria.jpg';
 import Alchemy from '../Components/Food/assets/ALCHEMY.jpg';
 import FlowerCafe from '../Components/Food/assets/Salon Des Fleurs.jpg'
+import useDocumentTitle from '../useDocumentTitle';
+
 
 export default function Food() {
   const [selectedCategory, setSelectedCategory] = React.useState(null);
+
+  useDocumentTitle('Food and Drink Spots - Madrid Memories');
 
 
   const cardsData = [
@@ -127,7 +131,7 @@ export default function Food() {
 
   return (
     <div style={{ marginBottom: '4rem' }}>
-      <Typography variant="title"  sx={{
+      <Typography variant="h1"  sx={{
           marginTop: '4rem',
           marginLeft: '3rem',
           marginRight: '3rem',

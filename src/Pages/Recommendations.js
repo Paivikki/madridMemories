@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, InputLabel, FormControl, Button, Container, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem, Alert } from '@mui/material';
+import useDocumentTitle from '../useDocumentTitle';
+
 
 const Recommendations = () => {
     const [name, setName] = useState('');
@@ -12,6 +14,9 @@ const Recommendations = () => {
     const [placeError, setPlaceError] = useState(false);
     const [descriptionError, setDescriptionError] = useState(false);
     const [error, setError] = useState(false);
+
+    useDocumentTitle('Submit Your Recommendations - Madrid Memories');
+
 
 
     useEffect(() => {
@@ -81,7 +86,7 @@ const Recommendations = () => {
     return (
         <Container maxWidth="med">
             <Box sx={{ my: 4 }}>
-                <Typography variant="title" sx={{
+                <Typography variant="h1" sx={{
                     marginTop: '4rem',
                     marginLeft: '0rem',
                     marginRight: '0rem',

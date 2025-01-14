@@ -14,6 +14,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PropTypes from 'prop-types';
 import shadows from '@mui/material/styles/shadows';
+import useDocumentTitle from '../useDocumentTitle';
+
 
 // Styled components for table cells and rows
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -125,9 +127,11 @@ const rows = [
 
 // Main component
 export default function ThingsToDoPage() {
+  useDocumentTitle('Things To Do - Madrid Memories');
+
   return (
     <div>
-       <Typography variant="title"  sx={{
+       <Typography variant="h1"  sx={{
           marginTop: '4rem',
           marginLeft: '3rem',
           marginRight: '3rem',

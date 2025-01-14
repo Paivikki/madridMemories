@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Box } from '@mui/material';
 
 const FindingHousing = () => {
+    
     return (
         <Box>
             <Typography variant="h5" component="h2" gutterBottom>

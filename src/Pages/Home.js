@@ -5,9 +5,13 @@ import ImageButton1 from '../Components/Home/ImageButton1';
 import ImageButton2 from '../Components/Home/ImageButton2';
 import ImageWithText from '../Components/Home/ImageWithText';
 import Box from '@mui/material';
+import useDocumentTitle from '../useDocumentTitle';
 
 
 export default function HomePage() {
+  useDocumentTitle('Home Page - Madrid Memories');
+
+
   return (
     <div>
       <div>
