@@ -136,7 +136,7 @@ export default function ThingsToDoPage() {
           lineHeight: 1.2,
           textAlign: 'left',
         }}>
-          Things We Did
+          Things To Do
       </Typography>
       <Typography variant="body1"  gutterBottom style={{ align: 'left', marginTop: "1rem", marginLeft: "3rem", marginRight: '3rem',   }}>
         Here you can find some of the things that we did in Madrid together with some practical information and a short description. Have fun to go do it yourself!

@@ -14,13 +14,13 @@ import { blue } from '@mui/material/colors';
 const images = [
   {
     url: food,
-    title: 'Food Recommendations',
+    title: 'Food and Drink Spots',
     width: '100%',
     to: '/food',
   },
   {
     url: things,
-    title: 'Things to do',
+    title: 'Things To Do',
     width: '100%',
     to: '/things-to-do',
   },
