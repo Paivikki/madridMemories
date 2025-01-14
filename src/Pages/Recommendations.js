@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, Button, Container, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem, Alert } from '@mui/material';
+import { TextField, InputLabel, FormControl, Button, Container, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem, Alert } from '@mui/material';
 
 const Recommendations = () => {
     const [name, setName] = useState('');
@@ -24,56 +24,56 @@ const Recommendations = () => {
     const handleNameChange = e => {
         setName(e.target.value);
         if (e.target.validity.valid) {
-          setNameError(false);
+            setNameError(false);
         } else {
-          setNameError(true);
+            setNameError(true);
         }
-      };
+    };
 
     const handlePlaceChange = e => {
         setPlace(e.target.value);
         if (e.target.validity.valid) {
-          setPlaceError(false);
+            setPlaceError(false);
         } else {
-          setPlaceError(true);
+            setPlaceError(true);
         }
-      };
+    };
 
-      const handleDescriptionChange = e => {
+    const handleDescriptionChange = e => {
         setDescription(e.target.value);
         if (e.target.validity.valid) {
-          setDescriptionError(false);
+            setDescriptionError(false);
         } else {
-          setDescriptionError(true);
+            setDescriptionError(true);
         }
-      };
+    };
 
 
     const handleSubmit = (event) => {
-        event.preventDefault();     
-          if(!place){            
+        event.preventDefault();
+        if (!place) {
             setError('You must include required fields before you can submit');
             setPlaceError(true);
-          }
-          if (!description) {
+        }
+        if (!description) {
             setError('You must include required fields before you can submit');
             setDescriptionError(true);
-          }
+        }
         else {
-             alert("Thank you for your recommendation! Form Successfully Submitted");
-             setError(false);
-        
+            alert("Thank you for your recommendation! Form Successfully Submitted");
+            setError(false);
 
-        const newRecommendation = { place, description, type };
-        const updatedRecommendations = [...recommendations, newRecommendation];
-        setRecommendations(updatedRecommendations);
-        localStorage.setItem('recommendations', JSON.stringify(updatedRecommendations));
-        // Reset form fields
-        setName('');
-        setPlace('');
-        setDescription('');
-        setLinks('');
-        setType('');
+
+            const newRecommendation = { place, description, type };
+            const updatedRecommendations = [...recommendations, newRecommendation];
+            setRecommendations(updatedRecommendations);
+            localStorage.setItem('recommendations', JSON.stringify(updatedRecommendations));
+            // Reset form fields
+            setName('');
+            setPlace('');
+            setDescription('');
+            setLinks('');
+            setType('');
         }
 
     };
@@ -104,12 +104,12 @@ const Recommendations = () => {
                             onChange={handleNameChange}
                             error={nameError}
                             inputProps={{
-                              pattern: "[A-Za-z ]+",
+                                pattern: "[A-Za-z ]+",
                             }}
                             helperText={
-                              nameError ? "Please enter your name (letters and spaces only)" : ""
+                                nameError ? "Please enter your name (letters and spaces only)" : ""
                             }
-                            
+
                             margin="normal"
                             autoComplete="name"
                         />
@@ -144,7 +144,23 @@ const Recommendations = () => {
                             multiline
                             rows={4}
                         />
-                        <Select
+                        <FormControl fullWidth>
+                            <InputLabel id="simple-select-label">Select the Type of Recommendation</InputLabel>
+                            <Select
+                                labelId="simple-select-label"
+                                id="simple-select"
+                                value={type}
+                                label="Select the Type of Recommendation"
+                                onChange={(e) => setType(e.target.value)}
+                            >
+                                <MenuItem value="Food">Food</MenuItem>
+                                <MenuItem value="Museum">Museum</MenuItem>
+                                <MenuItem value="Attraction">Attraction</MenuItem>
+                                <MenuItem value="Activity">Activity</MenuItem>
+                                <MenuItem value="Other">Other</MenuItem>
+                            </Select>
+                        </FormControl>
+                        {/* <Select
                             fullWidth
                             value={type}
                             onChange={(e) => setType(e.target.value)}
@@ -159,7 +175,7 @@ const Recommendations = () => {
                             <MenuItem value="Attraction">Attraction</MenuItem>
                             <MenuItem value="Activity">Activity</MenuItem>
                             <MenuItem value="Other">Other</MenuItem>
-                        </Select>
+                        </Select> */}
                         {error && (
                             <Typography color="error" sx={{ mt: 2 }}>
                                 {error}
