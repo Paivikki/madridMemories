@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/madridMemories/static/css/main.a205ff64.css",
-    "main.js": "/madridMemories/static/js/main.16366a67.js",
+    "main.css": "/madridMemories/static/css/main.6a03368b.css",
+    "main.js": "/madridMemories/static/js/main.d8e27695.js",
     "static/js/488.fb575143.chunk.js": "/madridMemories/static/js/488.fb575143.chunk.js",
     "static/media/things.jpg": "/madridMemories/static/media/things.31a22520c6b4926b0317.jpg",
     "static/media/recommendations.jpg": "/madridMemories/static/media/recommendations.a9c7f2778ff26d057bdb.jpg",
@@ -22,12 +22,12 @@
     "static/media/NEXT LEVEL Arcade Bar.jpg": "/madridMemories/static/media/NEXT LEVEL Arcade Bar.c032b8052da7aec99e4d.jpg",
     "static/media/logo.png": "/madridMemories/static/media/logo.b976e53a0126a6d403ce.png",
     "index.html": "/madridMemories/index.html",
-    "main.a205ff64.css.map": "/madridMemories/static/css/main.a205ff64.css.map",
-    "main.16366a67.js.map": "/madridMemories/static/js/main.16366a67.js.map",
+    "main.6a03368b.css.map": "/madridMemories/static/css/main.6a03368b.css.map",
+    "main.d8e27695.js.map": "/madridMemories/static/js/main.d8e27695.js.map",
     "488.fb575143.chunk.js.map": "/madridMemories/static/js/488.fb575143.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a205ff64.css",
-    "static/js/main.16366a67.js"
+    "static/css/main.6a03368b.css",
+    "static/js/main.d8e27695.js"
   ]
 }
