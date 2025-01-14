@@ -117,6 +117,13 @@ const Recommendations = () => {
 
                             margin="normal"
                             autoComplete="name"
+                            sx={{
+                                '& .MuiOutlinedInput-root': {
+                                    '& fieldset': {
+                                        borderColor: 'black', // Change border color
+                                    }
+                                },
+                            }}
                         />
                         <TextField
                             fullWidth
@@ -127,6 +134,13 @@ const Recommendations = () => {
                             error={placeError}
                             helperText={placeError ? "Please enter the name of your recommendation" : ""}
                             required
+                            sx={{
+                                '& .MuiOutlinedInput-root': {
+                                    '& fieldset': {
+                                        borderColor: 'black', // Change border color
+                                    }
+                                },
+                            }}
                         />
                         <TextField
                             fullWidth
@@ -139,6 +153,13 @@ const Recommendations = () => {
                             error={descriptionError}
                             helperText={descriptionError ? "Please enter the description of your recommendation" : ""}
                             required
+                            sx={{
+                                '& .MuiOutlinedInput-root': {
+                                    '& fieldset': {
+                                        borderColor: 'black', // Change border color
+                                    }
+                                },
+                            }}
                         />
                         <TextField
                             fullWidth
@@ -148,6 +169,13 @@ const Recommendations = () => {
                             margin="normal"
                             multiline
                             rows={4}
+                            sx={{
+                                '& .MuiOutlinedInput-root': {
+                                    '& fieldset': {
+                                        borderColor: 'black', // Change border color
+                                    }
+                                },
+                            }}
                         />
                         <FormControl fullWidth>
                             <InputLabel id="simple-select-label">Select the Type of Recommendation</InputLabel>
@@ -157,6 +185,11 @@ const Recommendations = () => {
                                 value={type}
                                 label="Select the Type of Recommendation"
                                 onChange={(e) => setType(e.target.value)}
+                                sx={{
+                                    '& .MuiOutlinedInput-notchedOutline': {
+                                        borderColor: 'black', // Change this to your desired color
+                                    },
+                                }}
                             >
                                 <MenuItem value="Food">Food</MenuItem>
                                 <MenuItem value="Museum">Museum</MenuItem>
