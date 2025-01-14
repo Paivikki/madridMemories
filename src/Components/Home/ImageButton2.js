@@ -15,13 +15,13 @@ const images = [
     url: tips,
     title: 'Tips and Tricks',
     width: '100%',
-    to: '/tips',
+    to: '/#/tips',
   },
   {
     url: recommendations,
     title: 'Submit Recommendations',
     width: '100%',
-    to: '/recommendations',
+    to: '/#/recommendations',
   },
 ];
 
