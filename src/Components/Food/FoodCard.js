@@ -24,7 +24,7 @@ export default function MediaCard({ image, title, text, onShare, rating, categor
           {title}
           <Chip label={category} size="small" variant="outlined" style={{marginLeft: "1rem"}}/>
         </Typography>
-        <Rating name="read-only" value={rating} readOnly style={{marginButton: "1rem"}}/>
+        <Rating name="read-only" value={rating} readOnly sx={{ marginButton: "1rem", color: "#10579E", }} />
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {text}
         </Typography>

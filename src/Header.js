@@ -28,6 +28,7 @@ const Header = () => {
                 </IconButton>
                 <Menu
                     id="menu-appbar"
+                    aria-label='mainMenu'
                     anchorEl={anchorEl}
                     anchorOrigin={{
                         vertical: 'top',
@@ -41,7 +42,7 @@ const Header = () => {
                     open={Boolean(anchorEl)}
                     onClose={handleClose}
                 >
-                    <MenuItem onClick={handleClose} component={Link} to="/">Home</MenuItem>
+                    <MenuItem onClick={handleClose} component={Link} to="/madridMemories">Home</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/food">Food and Drink Spots</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/things-to-do">Things To Do</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/tips">Tips and Tricks</MenuItem>

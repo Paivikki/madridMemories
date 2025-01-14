@@ -1,0 +1,9 @@
+<script>
+    var redirect = function() {
+      var pathname = window.location.pathname;
+      if (pathname !== '/') {
+        window.location.replace('/#' + pathname);
+      }
+    };
+    redirect();
+</script>
